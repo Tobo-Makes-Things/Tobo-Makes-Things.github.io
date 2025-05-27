@@ -1,0 +1,185 @@
+:root
+{
+	--color-step: 8;
+
+	--prim-color-hex: #FDDB6D;
+	--prim-text-hex: #ffffff;
+	--seco-color-hex: #eee;
+	--seco-text-hex: #111;
+
+	/*Primary*/
+	--prim-color-p2: hsl(from var(--prim-color-hex) h s calc(l + (var(--color-step) * 2)));
+	--prim-color-p1: hsl(from var(--prim-color-hex) h s calc(l + var(--color-step)));
+	--prim-color: hsl(from var(--prim-color-hex) h s l);
+	--prim-color-m1: hsl(from var(--prim-color-hex) h calc(s - (var(--color-step) * 2)) calc(l - var(--color-step)));
+	--prim-color-m2: hsl(from var(--prim-color-hex) h calc(s - (var(--color-step) * 4)) calc(l - (var(--color-step) * 2)));
+
+	--prim-text-p2: hsl(from var(--prim-text-hex) h s calc(l + (var(--color-step) * 2)));
+	--prim-text-p1: hsl(from var(--prim-text-hex) h s calc(l + var(--color-step)));
+	--prim-text: hsl(from var(--prim-text-hex) h s l);
+	--prim-text-m1: hsl(from var(--prim-text-hex) h calc(s - (var(--color-step) * 2)) calc(l - var(--color-step)));
+	--prim-text-m2: hsl(from var(--prim-text-hex) h calc(s - (var(--color-step) * 4)) calc(l - (var(--color-step) * 2)));
+	
+	/*Secondary*/
+	--seco-color-p2: hsl(from var(--seco-color-hex) h s calc(l + (var(--color-step) * 2)));
+	--seco-color-p1: hsl(from var(--seco-color-hex) h s calc(l + var(--color-step)));
+	--seco-color: hsl(from var(--seco-color-hex) h s l);
+	--seco-color-m1: hsl(from var(--seco-color-hex) h calc(s - (var(--color-step) * 2)) calc(l - var(--color-step)));
+	--seco-color-m2: hsl(from var(--seco-color-hex) h calc(s - (var(--color-step) * 4)) calc(l - (var(--color-step) * 2)));	
+
+	--seco-text-p2: hsl(from var(--seco-text-hex) h s calc(l + (var(--color-step) * 2)));
+	--seco-text-p1: hsl(from var(--seco-text-hex) h s calc(l + var(--color-step)));
+	--seco-text: hsl(from var(--seco-text-hex) h s l);
+	--seco-text-m1: hsl(from var(--seco-text-hex) h calc(s - (var(--color-step) * 2)) calc(l - var(--color-step)));
+	--seco-text-m2: hsl(from var(--seco-text-hex) h calc(s - (var(--color-step) * 4)) calc(l - (var(--color-step) * 2)));	
+}
+
+*{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark)
+{
+	:root{
+		--prim-color-hex: #FDDB6D;
+		--prim-text-hex: #111;
+		--seco-color-hex: #222;
+		--seco-text-hex: #fff;
+	}
+}
+
+
+body, .tight{
+	margin: 0;
+	padding: 0;
+}
+
+nav.navbar{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.bg-prim-p2{background-color: var(--prim-color-p2); color: var(--prim-text-p2);}
+.bg-prim-p1{background-color: var(--prim-color-p1); color: var(--prim-text-p1);}
+.bg-prim{background-color: var(--prim-color); color: var(--prim-text);}
+.bg-prim-m1{background-color: var(--prim-color-m1); color: var(--prim-text-m1);}
+.bg-prim-m2{background-color: var(--prim-color-m2); color: var(--prim-text-m2);}
+
+.bg-seco-p2{background-color: var(--seco-color-p2); color: var(--seco-text-p2);}
+.bg-seco-p1{background-color: var(--seco-color-p1); color: var(--seco-text-p1);}
+.bg-seco{background-color: var(--seco-color); color: var(--seco-text);}
+.bg-seco-m1{background-color: var(--seco-color-m1); color: var(--seco-text-m1);}
+.bg-seco-m2{background-color: var(--seco-color-m2); color: var(--seco-text-m2);}
+
+.card{
+	border-radius: 2rem;
+	padding: 0.333rem;
+}
+.card .card-title{
+	display: inline-block;
+	font-size: 2rem;
+	font-weight: bolder;
+	text-align: center;
+	width: 100%;
+}
+
+.container{
+	width: 80%;
+	margin: 0 10%;
+}
+
+.fs-0-1{font-size: 0.1rem;}
+.fs-0-333{font-size: 0.333rem;}
+.fs-0-5{font-size: 0.5rem;}
+.fs-0-666{font-size: 0.666rem;}
+.fs-1{font-size: 1rem;}
+.fs-1-333{font-size: 1.333rem;}
+.fs-1-5{font-size: 1.5rem;}
+.fs-1-666{font-size: 1.666rem;}
+.fs-2{font-size: 2rem;}
+
+.h1{
+	font-size: 2rem;
+	font-weight: bolder;
+}
+
+.hei-fs-0-1{height: 0.1rem;}
+.hei-fs-0-333{height: 0.333rem;}
+.hei-fs-0-5{height: 0.5rem;}
+.hei-fs-0-666{height: 0.666rem;}
+.hei-fs-1{height: 1rem;}
+.hei-fs-1-333{height: 1.333rem;}
+.hei-fs-1-5{height: 1.5rem;}
+.hei-fs-1-666{height: 1.666rem;}
+.hei-fs-2{height: 2rem;}
+.hei-fs-2-333{height: 2.333rem;}
+
+.inline{
+	display: inline;
+}
+
+.m-0-1{margin: 0.1rem;}
+.m-0-333{margin: 0.333rem;}
+.m-0-5{margin: 0.5rem;}
+.m-0-666{margin: 0.666rem;}
+.m-1{margin: 1rem;}
+.m-1-333{margin: 1.333rem;}
+.m-1-5{margin: 1.5rem;}
+.m-1-666{margin: 1.666rem;}
+.m-2{margin: 2rem;}
+.m-2-333{margin: 2.333rem;}
+
+.mx-0-1{margin: 0 0.1rem;}
+.mx-0-333{margin: 0 0.333rem;}
+.mx-0-5{margin: 0 0.5rem;}
+.mx-0-666{margin: 0 0.666rem;}
+.mx-1{margin: 0 1rem;}
+.mx-1-333{margin: 0 1.333rem;}
+.mx-1-5{margin: 0 1.5rem;}
+.mx-1-666{margin: 0 1.666rem;}
+.mx-2{margin: 0 2rem;}
+.mx-2-333{margin: 0 2.333rem;}
+
+.my-0-1{margin: 0.1rem 0;}
+.my-0-333{margin: 0 0.333rem 0;}
+.my-0-5{margin: 0.5rem 0;}
+.my-0-666{margin: 0.666rem 0;}
+.my-1{margin: 1rem 0;}
+.my-1-333{margin: 1.333rem 0;}
+.my-1-5{margin: 1.5rem 0;}
+.my-1-666{margin: 1.666rem 0;}
+.my-2{margin: 2rem 0;}
+.my-2-333{margin: 2.333rem 0;}
+
+.p-0-1{padding: 0.1rem;}
+.p-0-333{padding: 0.333rem;}
+.p-0-5{padding: 0.5rem;}
+.p-0-666{padding: 0.666rem;}
+.p-1{padding: 1rem;}
+.p-1-333{padding: 1.333rem;}
+.p-1-5{padding: 1.5rem;}
+.p-1-666{padding: 1.666rem;}
+.p-2{padding: 2rem;}
+.p-2-333{padding: 2.333rem;}
+
+.pfp{
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+
+.pill{
+	border-radius: 50rem;
+}
+
+.wid-fs-0-1{width: 0.1rem;}
+.wid-fs-0-333{width: 0.333rem;}
+.wid-fs-0-5{width: 0.5rem;}
+.wid-fs-0-666{width: 0.666rem;}
+.wid-fs-1{width: 1rem;}
+.wid-fs-1-333{width: 1.333rem;}
+.wid-fs-1-5{width: 1.5rem;}
+.wid-fs-1-666{width: 1.666rem;}
+.wid-fs-2{width: 2rem;}
+.wid-fs-2-333{width: 2.333rem;}
+
+.va-bottom{ vertical-align: bottom; }
